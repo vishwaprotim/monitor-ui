@@ -1,0 +1,64 @@
+.field {
+    text-align: left;
+    width: 100%;
+}
+
+.lineContainer{
+    /* This centers the three name fields */
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2%;
+}
+
+.name {
+    text-align: left;
+    width: 33%;   
+}
+
+.middleName{
+    padding-left: 1%;    
+    padding-right: 1%;
+}
+
+.marks{
+    width: 80%;
+    padding-left: 1%;
+}
+
+.card{
+    border-radius: 0px;
+    width: 60%;
+    margin: auto;
+    background: white;
+    padding: 1%;
+}
+
+.card h1{
+    text-align: center;
+}
+
+.card button {
+    margin: 1%;
+}
+
+.spinner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    margin-top: -5%;
+    margin-left: -5%;
+}
+
+.container{
+    margin-top: .2%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.submit{
+    width: 25%;
+}
+

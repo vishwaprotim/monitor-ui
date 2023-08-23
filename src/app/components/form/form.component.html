@@ -1,0 +1,94 @@
+<div class="container">
+  <div class="card">
+    <form [formGroup]="studentForm" (ngSubmit)="submitForm()">
+      <h1>{{ title }}</h1>
+
+      <div class="lineContainer">
+        <mat-form-field class="name" appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input name="fName" matInput formControlName="fName" />
+          <mat-error *ngIf="errorHandler('fName')">
+            {{ errorMessage("fName") }}
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="name middleName" appearance="outline">
+          <mat-label>Middle Name</mat-label>
+          <input name="mName" matInput formControlName="mName" />
+          <mat-error *ngIf="errorHandler('mName')">
+            {{ errorMessage("mName") }}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="name" appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input name="lName" matInput formControlName="lName" />
+          <mat-error *ngIf="errorHandler('lName')">
+            {{ errorMessage("lName") }}
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="lineContainer">
+        <mat-form-field class="field" appearance="outline">
+          <mat-label>Date of Birth</mat-label>
+          <input
+            matInput
+            name="dob"
+            readonly
+            [min]="minDate"
+            [max]="maxDate"
+            [matDatepicker]="picker"
+            formControlName="dob"
+          />
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="errorHandler('dob')">
+            {{ errorMessage("dob") }}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field marks" appearance="outline">
+          <mat-label>Previous Annual Marks</mat-label>
+          <input name="marks" matInput formControlName="marks" />
+          <mat-error *ngIf="errorHandler('marks')">
+            {{ errorMessage("marks") }}
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <mat-form-field class="field" appearance="outline">
+        <mat-label>Address Line 1</mat-label>
+        <input name="addrLine1" matInput formControlName="addrLine1" />
+        <mat-error *ngIf="errorHandler('addrLine1')">
+          {{ errorMessage("addrLine1") }}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="field" appearance="outline">
+        <mat-label>Address Line 2</mat-label>
+        <input name="addrLine2" matInput formControlName="addrLine2" />
+        <mat-error *ngIf="errorHandler('addrLine2')">
+          {{ errorMessage("addrLine2") }}
+        </mat-error>
+      </mat-form-field>
+
+      <div class="text-center">
+        <mat-spinner *ngIf="submitted" class="spinner"></mat-spinner>
+        <button
+          type="submit"
+          [disabled]="submitted"
+          mat-raised-button
+          color="primary"
+        >
+          Submit
+        </button>
+        <button type="button" mat-raised-button color="accent" routerLink="">
+          Return
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
