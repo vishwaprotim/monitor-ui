@@ -30,6 +30,17 @@ Once the server is up, the page can be accessed at [http://localhost:4200](http:
 
 Ensure the backend monitor api is running. Check this [ReadMe](https://github.com/vishwaprotim/monitor#readme) to know more.
 
+### Screenshots:
+
+Home Screen -
+![home screen](./src/assets/resources/homePage.jpg)
+
+Registeration Form -
+![registration form](./src/assets/resources/registrationForm.jpg)
+
+Student Details Screen -
+![registration details](./src/assets/resources/registrationDetails.jpg)
+
 ### Helpful References:
 
 1. Creating Angular Project with Microservice Integration | [YouTube](https://www.youtube.com/watch?v=9TG6nOPJJ3Y&t=1869s&ab_channel=LearnCodeWithDurgesh)
