@@ -35,7 +35,7 @@ Ensure the backend monitor api is running. Check this [ReadMe](https://github.co
 Home Screen -
 ![home screen](./src/assets/resources/homePage.jpg)
 
-Registeration Form -
+Registration Form -
 ![registration form](./src/assets/resources/registrationForm.jpg)
 
 Student Details Screen -
