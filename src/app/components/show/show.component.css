@@ -1,0 +1,28 @@
+.card {
+    border-radius: 0px;
+    width: 90%;
+    margin: auto;
+    background: white;
+    padding: 1%;
+}
+  
+.container{
+    margin-top: .2%;
+}
+  
+.card h1{
+    text-align: center;
+}
+
+.card th{
+    text-align: center;
+}
+
+.card td{
+    text-align: center;
+}
+
+.button-line{
+    margin-top: 1%;
+    text-align: center;
+}

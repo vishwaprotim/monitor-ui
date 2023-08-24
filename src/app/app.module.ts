@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTableModule } from '@angular/material/table';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -22,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormComponent } from './components/form/form.component';
 import { StudentapiService } from'./service/studentapi.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ShowComponent } from './components/show/show.component';
 
 
 
@@ -30,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    FormComponent
+    FormComponent,
+    ShowComponent
   ],
   imports: [
     BrowserModule,
@@ -47,9 +50,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatNativeDateModule,
     MatProgressSpinnerModule,
     FormsModule,
-    // FormGroup,
-    // FormControl,
-    // Validators,
+    MatTableModule,
     ReactiveFormsModule,
     HttpClientModule
   ],

@@ -1,6 +1,22 @@
 <div class="container">
-  <h1>Welcome to Student API monitoring system</h1>
-  <button mat-raised-button color="primary" routerLink="/api">
-    Register Student
-  </button>
+  <div class="card">
+    <h1>{{ title }}</h1>
+    <div class="lineContainer">
+      <button mat-raised-button color="primary" routerLink="/api">
+        Register New Student
+      </button>
+    </div>
+    <div class="lineContainer">
+      <button mat-raised-button color="primary" routerLink="/show">
+        Student Details
+      </button>
+    </div>
+    <div class="lineContainer">
+      <a href="http://localhost:8080/swagger-ui/index.html" target="_blank">
+        <button mat-raised-button color="accent">
+          Try the API from Swagger
+        </button>
+      </a>
+    </div>
+  </div>
 </div>

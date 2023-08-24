@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { FormGroup, Validators, FormControl, FormBuilder } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { StudentapiService } from 'src/app/service/studentapi.service';
 
@@ -20,8 +20,10 @@ export class FormComponent  implements OnInit{
   private namePattern:string = "^[a-zA-Z ]*$";
   private marksPattern:string = "^(?=.)(([0-9]*)(\.([0-9]+))?)$";
 
-  constructor(private studentService: StudentapiService,
-              private snack: MatSnackBar){
+  constructor(
+    private studentService: StudentapiService,
+    private fb: FormBuilder,
+    private snack: MatSnackBar){
     // Date Picker - Restrict dates to min and max values allowed.
     // Set the min to Jan 1st 80 years in the past and max to Dec 31st 5 year in the past.
     // Note that in JS months are numbered from 0 to 11.
@@ -32,7 +34,7 @@ export class FormComponent  implements OnInit{
 
 
   ngOnInit() {
-    this.studentForm = new FormGroup({
+    this.studentForm = this.fb.group({
       fName: new FormControl(null, [Validators.required, Validators.minLength(2), Validators.pattern(this.namePattern)]),
       mName: new FormControl(null, [Validators.pattern(this.namePattern)]),
       lName: new FormControl(null, [Validators.required, Validators.minLength(2), Validators.pattern(this.namePattern)]),

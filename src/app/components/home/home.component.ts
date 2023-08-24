@@ -8,6 +8,5 @@ import { MatSnackBar } from '@angular/material/snack-bar'
 })
 export class HomeComponent {
 
-  constructor(private snack:MatSnackBar) {}
-
+  title:String = "Welcome to the Student Monitoring System";
 }

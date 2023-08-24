@@ -24,6 +24,10 @@ export class StudentapiService {
     return this.http.post(`${this.baseUrl}/student`, payload, {observe: 'response'});
   }
 
+  getAllStudents(){
+    return this.http.get(`${this.baseUrl}/student`,{observe: 'response', responseType: 'json'});
+  }
+
 
   convertDateToString(date:Date){
     let mm:number = (date.getMonth() + 1) // Month from 0 to 11
