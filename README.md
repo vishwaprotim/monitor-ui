@@ -18,7 +18,13 @@ npm install -g @angular/cli
 
 If you need more details, check the [Angular documentation](https://angular.io/guide/setup-local).
 
-After installing Angular, go to the project directory and run this command to start the UI server:
+After installing Angular, go to the project directory and install necessary packages:
+
+```shell
+npm install
+```
+
+Now run this command to start the UI server:
 
 ```shell
 ng serve
